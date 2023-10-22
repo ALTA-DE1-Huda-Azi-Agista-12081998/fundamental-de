@@ -1,0 +1,69 @@
+1. Kapan harus menggunakan database relasional atau database NoSQL? 
+
+Pilihan antara menggunakan database relasional (SQL) atau database NoSQL tergantung pada kebutuhan proyek dan karakteristik data. Berikut beberapa pertimbangan:
+
+-  Database Relasional (SQL) :
+  - Cocok untuk data yang terstruktur dengan baik, seperti data transaksional.
+  - Dapat menjaga konsistensi data dan integritas referensial.
+  - Berguna untuk aplikasi yang membutuhkan tingkat keamanan data tinggi.
+
+-  Database NoSQL :
+  - Cocok untuk data yang semi-terstruktur atau tak terstruktur, seperti data dokumen atau data sensor.
+  - Fleksibel dalam menangani pertumbuhan data yang cepat dan perubahan skema data.
+  - Digunakan untuk aplikasi yang memerlukan skalabilitas horizontal dan fleksibilitas dalam penyimpanan data.
+
+Keputusan antara SQL dan NoSQL harus didasarkan pada pemahaman yang mendalam tentang jenis data yang akan disimpan dan kebutuhan spesifik proyek.
+
+2. Apa perbedaan antara database, data lake, data warehouse, dan data mart? 
+
+-  Database : Database adalah tempat penyimpanan data terstruktur dengan skema yang jelas. Digunakan untuk data operasional dan transaksional.
+
+-  Data Lake : Data Lake adalah tempat penyimpanan data mentah, baik terstruktur maupun tak terstruktur. Ini memungkinkan penyimpanan data dalam bentuk aslinya tanpa transformasi sebelumnya.
+
+-  Data Warehouse : Data Warehouse adalah tempat penyimpanan data yang dioptimalkan untuk analisis bisnis. Data warehouse telah melalui proses ETL (Extract, Transform, Load) dan memiliki skema yang dioptimalkan untuk pelaporan dan analisis.
+
+-  Data Mart : Data Mart adalah subset dari data warehouse yang fokus pada area tertentu dalam bisnis atau departemen. Data mart adalah versi yang lebih kecil dan terfokus dari data warehouse, disesuaikan dengan kebutuhan pengguna.
+
+3. Normalisasi Database dan Tabel yang Dinormalisasi 
+
+Normalisasi adalah proses desain basis data yang bertujuan mengurangi data yang berlebihan dan memastikan konsistensi data. Tabel yang diberikan sudah cukup dinormalisasi, tetapi kita bisa melakukan beberapa perbaikan yaitu menormalisasikan tabel ini ke dalam tiga tabel terpisah: Employees, Jobs, dan Cities.
+
+ Tabel Employees :
+
+employee_id | employee_name | job_code | city_code
+--- | --- | --- | ---
+1 | John Smith | 101 | 201
+2 | Alice Johnson | 102 | 202
+3 | Bob Davis | 103 | 203
+4 | Emily Wilson | 101 | 204
+5 | Michael Lee | 102 | 205
+6 | Sarah Brown | 103 | 206
+7 | James Clark | 101 | 207
+8 | Laura Taylor | 102 | 208
+9 | Daniel White | 103 | 209
+10 | Olivia Martin | 101 | 210
+
+ Tabel Jobs :
+
+job_code | job
+--- | ---
+101 | Software Engineer
+102 | Data Analyst
+103 | Data Engineer
+
+ Tabel Cities :
+
+city_code | city_name | province_code | province_name
+--- | --- | --- | ---
+201 | New York | 301 | New York
+202 | Los Angeles | 302 | California
+203 | Chicago | 303 | Illinois
+204 | Houston | 304 | Texas
+205 | Miami | 305 | Florida
+206 | Boston | 306 | Massachusetts
+207 | San Francisco | 307 | California
+208 | Seattle | 308 | Washington
+209 | Denver | 309 | Colorado
+210 | Atlanta | 310 | Georgia
+
+Dengan normalisasi, kita mengurangi duplikasi data dan memastikan bahwa perubahan data hanya perlu dilakukan di satu tempat, menjaga konsistensi data dan efisiensi dalam pengelolaan data.
